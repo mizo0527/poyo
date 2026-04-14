@@ -1,68 +1,39 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>poyo</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f3f3f3;
-    }
+@keyframes poyoBounce {
+  0% {
+    transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.6deg);
+  }
 
-    .poyo {
-      width: 240px;
-      display: block;
-      transform-origin: center bottom;
-      animation: poyoBounce 0.95s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
-    }
+  /* ちょい沈み込み */
+  10% {
+    transform: translateY(4px) scaleX(1.04) scaleY(0.96) rotate(-0.3deg);
+  }
 
-    @keyframes poyoBounce {
-      0% {
-        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.6deg);
-      }
+  /* 1回目の大きい跳ね */
+  28% {
+    transform: translateY(-22px) scaleX(0.96) scaleY(1.06) rotate(0.6deg);
+  }
 
-      /* ちょい沈み込み */
-      10% {
-        transform: translateY(3px) scaleX(1.04) scaleY(0.96) rotate(-0.3deg);
-      }
+  /* 着地してグニャ */
+  42% {
+    transform: translateY(3px) scaleX(1.09) scaleY(0.91) rotate(0deg);
+  }
 
-      /* 1回目の跳ね */
-      28% {
-        transform: translateY(-14px) scaleX(0.97) scaleY(1.04) rotate(0.6deg);
-      }
+  /* 戻り */
+  50% {
+    transform: translateY(0) scaleX(0.99) scaleY(1.01) rotate(-0.2deg);
+  }
 
-      /* 着地してグニャ */
-      42% {
-        transform: translateY(2px) scaleX(1.07) scaleY(0.93) rotate(0deg);
-      }
+  /* 2回目の小さい跳ね */
+  68% {
+    transform: translateY(-14px) scaleX(0.985) scaleY(1.03) rotate(-0.5deg);
+  }
 
-      /* 戻り */
-      50% {
-        transform: translateY(0) scaleX(0.99) scaleY(1.01) rotate(-0.2deg);
-      }
+  /* 2回目の着地グニャ */
+  82% {
+    transform: translateY(2px) scaleX(1.06) scaleY(0.94) rotate(0.2deg);
+  }
 
-      /* 2回目の小さい跳ね */
-      68% {
-        transform: translateY(-9px) scaleX(0.985) scaleY(1.025) rotate(-0.5deg);
-      }
-
-      /* 2回目の着地グニャ */
-      82% {
-        transform: translateY(2px) scaleX(1.05) scaleY(0.95) rotate(0.2deg);
-      }
-
-      100% {
-        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.6deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <img src="IMG_5595.jpeg" alt="キャラクター" class="poyo">
-</body>
-</html>
+  100% {
+    transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.6deg);
+  }
+}

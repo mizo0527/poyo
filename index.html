@@ -1,84 +1,67 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>poyo</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f3f3f3;
-      overflow: hidden;
-    }
+.poyo {
+  width: 240px;
+  display: block;
+  transform-origin: center bottom;
+  animation: poyoBounce 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
 
-    .poyo {
-      width: 240px;
-      display: block;
-      transform-origin: center bottom;
-      animation: poyoBounce 1.45s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
-    }
+@keyframes poyoBounce {
+  0% {
+    transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(0deg);
+  }
 
-    @keyframes poyoBounce {
-      0% {
-        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.4deg);
-      }
+  /* 1回目の沈み込み */
+  8% {
+    transform: translateY(8px) scaleX(1.08) scaleY(0.90) rotate(0deg);
+  }
 
-      /* 強めの沈み込み */
-      8% {
-        transform: translateY(8px) scaleX(1.08) scaleY(0.90) rotate(-0.2deg);
-      }
+  /* 1回目 上昇 */
+  20% {
+    transform: translateY(-68px) scaleX(0.93) scaleY(1.10) rotate(0deg);
+  }
 
-      /* 一気に高く跳ぶ */
-      24% {
-        transform: translateY(-58px) scaleX(0.93) scaleY(1.10) rotate(0.4deg);
-      }
+  /* 1回目 滞空 */
+  30% {
+    transform: translateY(-70px) scaleX(0.94) scaleY(1.08) rotate(0deg);
+  }
 
-      /* 頂点付近でちょい滞空 */
-      34% {
-        transform: translateY(-60px) scaleX(0.94) scaleY(1.08) rotate(0.2deg);
-      }
+  /* 1回目 降下 */
+  40% {
+    transform: translateY(-62px) scaleX(0.95) scaleY(1.06) rotate(0deg);
+  }
 
-      /* まだ少し浮いてる */
-      42% {
-        transform: translateY(-52px) scaleX(0.95) scaleY(1.06) rotate(0deg);
-      }
+  /* 1回目 着地グニャ */
+  50% {
+    transform: translateY(6px) scaleX(1.11) scaleY(0.89) rotate(0deg);
+  }
 
-      /* 着地グニャ */
-      52% {
-        transform: translateY(6px) scaleX(1.11) scaleY(0.89) rotate(0deg);
-      }
+  /* いったん戻る */
+  58% {
+    transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(0deg);
+  }
 
-      /* 戻り */
-      58% {
-        transform: translateY(0) scaleX(0.98) scaleY(1.02) rotate(-0.1deg);
-      }
+  /* 2回目の沈み込み */
+  66% {
+    transform: translateY(8px) scaleX(1.08) scaleY(0.90) rotate(0deg);
+  }
 
-      /* 2回目の高めの跳ね */
-      72% {
-        transform: translateY(-42px) scaleX(0.95) scaleY(1.07) rotate(-0.3deg);
-      }
+  /* 2回目 上昇 */
+  78% {
+    transform: translateY(-68px) scaleX(0.93) scaleY(1.10) rotate(0deg);
+  }
 
-      /* 2回目の頂点で少し浮く */
-      80% {
-        transform: translateY(-44px) scaleX(0.96) scaleY(1.05) rotate(-0.1deg);
-      }
+  /* 2回目 滞空 */
+  88% {
+    transform: translateY(-70px) scaleX(0.94) scaleY(1.08) rotate(0deg);
+  }
 
-      /* 2回目の着地 */
-      90% {
-        transform: translateY(4px) scaleX(1.07) scaleY(0.93) rotate(0.1deg);
-      }
+  /* 2回目 降下 */
+  94% {
+    transform: translateY(-62px) scaleX(0.95) scaleY(1.06) rotate(0deg);
+  }
 
-      100% {
-        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-0.4deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <img src="IMG_5595.jpeg" alt="キャラクター" class="poyo">
-</body>
-</html> 
+  /* 2回目 着地グニャ */
+  100% {
+    transform: translateY(6px) scaleX(1.11) scaleY(0.89) rotate(0deg);
+  }
+}

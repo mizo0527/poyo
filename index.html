@@ -15,22 +15,44 @@
     }
 
     .poyo {
-      width: 220px;
-      animation: poyoMove 0.8s ease-in-out infinite;
-      transform-origin: center bottom;
+      width: 240px;
       display: block;
+      transform-origin: center bottom;
+      animation: poyoBounce 0.9s ease-in-out infinite;
     }
 
-    @keyframes poyoMove {
-      0%   { transform: translateY(0px) rotate(-3deg); }
-      25%  { transform: translateY(-3px) rotate(2deg); }
-      50%  { transform: translateY(0px) rotate(-2deg); }
-      75%  { transform: translateY(-2px) rotate(3deg); }
-      100% { transform: translateY(0px) rotate(-3deg); }
+    @keyframes poyoBounce {
+      0% {
+        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-1deg);
+      }
+
+      12% {
+        transform: translateY(2px) scaleX(1.03) scaleY(0.97) rotate(-0.5deg);
+      }
+
+      30% {
+        transform: translateY(-10px) scaleX(0.98) scaleY(1.03) rotate(1deg);
+      }
+
+      50% {
+        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(0deg);
+      }
+
+      62% {
+        transform: translateY(2px) scaleX(1.03) scaleY(0.97) rotate(0.5deg);
+      }
+
+      80% {
+        transform: translateY(-8px) scaleX(0.985) scaleY(1.025) rotate(-1deg);
+      }
+
+      100% {
+        transform: translateY(0) scaleX(1.00) scaleY(1.00) rotate(-1deg);
+      }
     }
   </style>
 </head>
 <body>
-<img src="IMG_5595.jpeg" class="poyo">
+  <img src="IMG_5595.jpeg" alt="キャラクター" class="poyo">
 </body>
 </html>

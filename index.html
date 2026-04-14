@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
 .poyo {
   width: 240px;
   display: block;
@@ -6,37 +13,25 @@
 }
 
 @keyframes poyoBounce {
-  0% {
-    transform: translateY(0) scaleX(1.00) scaleY(1.00);
-  }
+  0% { transform: translateY(0) scaleX(1.00) scaleY(1.00); }
 
-  /* 1回目 上昇 */
-  20% {
-    transform: translateY(-70px) scaleX(0.96) scaleY(1.04);
-  }
+  20% { transform: translateY(-70px) scaleX(0.96) scaleY(1.04); }
+  35% { transform: translateY(-70px) scaleX(0.97) scaleY(1.03); }
 
-  /* 1回目 滞空 */
-  35% {
-    transform: translateY(-70px) scaleX(0.97) scaleY(1.03);
-  }
+  50% { transform: translateY(0) scaleX(1.05) scaleY(0.95); }
 
-  /* 1回目 着地 */
-  50% {
-    transform: translateY(0) scaleX(1.05) scaleY(0.95);
-  }
+  70% { transform: translateY(-70px) scaleX(0.96) scaleY(1.04); }
+  85% { transform: translateY(-70px) scaleX(0.97) scaleY(1.03); }
 
-  /* 2回目 上昇 */
-  70% {
-    transform: translateY(-70px) scaleX(0.96) scaleY(1.04);
-  }
-
-  /* 2回目 滞空 */
-  85% {
-    transform: translateY(-70px) scaleX(0.97) scaleY(1.03);
-  }
-
-  /* 2回目 着地 */
-  100% {
-    transform: translateY(0) scaleX(1.05) scaleY(0.95);
-  }
+  100% { transform: translateY(0) scaleX(1.05) scaleY(0.95); }
 }
+</style>
+
+</head>
+
+<body>
+
+<img src="IMG_5595.jpeg" class="poyo">
+
+</body>
+</html>

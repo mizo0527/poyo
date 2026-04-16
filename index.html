@@ -15,7 +15,6 @@ body {
   overflow: hidden;
 }
 
-/* キャラ */
 .poyo {
   width: 200px;
   height: auto;
@@ -24,19 +23,19 @@ body {
   animation: poyoBounce 1.6s ease-in-out infinite;
 }
 
-/* ビョョーン本体 */
+/* ★ 躍動感強化版 */
 @keyframes poyoBounce {
 
   0% {
     transform: translateY(0) scaleX(1.00) scaleY(1.00);
   }
 
-  /* 上昇 */
+  /* 1回目 上昇 */
   18% {
     transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
   }
 
-  /* 滞空（ここがビョョーン感） */
+  /* 滞空 */
   32% {
     transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
   }
@@ -45,36 +44,39 @@ body {
     transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
   }
 
-  /* 着地ポニョーーん */
+  /* ★ 着地グシャッ（強） */
   52% {
-    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+    transform: translateY(3px) scaleX(1.18) scaleY(0.82);
   }
 
-  /* ←ここがキモ（グニャ保持） */
-  60% {
-    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+  /* ★ 崩れ維持（ここで躍動感） */
+  58% {
+    transform: translateY(2px) scaleX(1.16) scaleY(0.84);
   }
 
   /* 戻り */
-  66% {
-    transform: translateY(0) scaleX(1.02) scaleY(0.98);
+  64% {
+    transform: translateY(0) scaleX(1.03) scaleY(0.97);
   }
 
-  /* 2回目（完全コピー） */
-  78% {
+  /* 2回目 上昇（間なし） */
+  74% {
     transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
   }
 
-  88% {
+  /* 滞空 */
+  86% {
     transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
   }
 
-  96% {
+  /* 2回目 降下 */
+  94% {
     transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
   }
 
+  /* ★ 2回目グシャッ */
   100% {
-    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+    transform: translateY(3px) scaleX(1.18) scaleY(0.82);
   }
 }
 </style>

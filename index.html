@@ -1,41 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>poyo</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100dvh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      background: #f3f3f3;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .poyo {
-      width: 180px;
-      height: auto;
-      display: block;
-      transform-origin: center bottom;
-      animation: poyoBounce 1.45s ease-in-out infinite;
-      will-change: transform;
-    }
+<style>
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  overflow: hidden;
+}
 
-    @keyframes poyoBounce {
-      0%   { transform: translateY(0) scaleX(1.00) scaleY(1.00); }
-      20%  { transform: translateY(-70px) scaleX(0.96) scaleY(1.04); }
-      35%  { transform: translateY(-70px) scaleX(0.97) scaleY(1.03); }
-      50%  { transform: translateY(0) scaleX(1.05) scaleY(0.95); }
-      70%  { transform: translateY(-70px) scaleX(0.96) scaleY(1.04); }
-      85%  { transform: translateY(-70px) scaleX(0.97) scaleY(1.03); }
-      100% { transform: translateY(0) scaleX(1.05) scaleY(0.95); }
-    }
-  </style>
+/* キャラ */
+.poyo {
+  width: 200px;
+  height: auto;
+  display: block;
+  transform-origin: center bottom;
+  animation: poyoBounce 1.6s ease-in-out infinite;
+}
+
+/* ビョョーン本体 */
+@keyframes poyoBounce {
+
+  0% {
+    transform: translateY(0) scaleX(1.00) scaleY(1.00);
+  }
+
+  /* 上昇 */
+  18% {
+    transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
+  }
+
+  /* 滞空（ここがビョョーン感） */
+  32% {
+    transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
+  }
+
+  44% {
+    transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
+  }
+
+  /* 着地ポニョーーん */
+  52% {
+    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+  }
+
+  /* ←ここがキモ（グニャ保持） */
+  60% {
+    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+  }
+
+  /* 戻り */
+  66% {
+    transform: translateY(0) scaleX(1.02) scaleY(0.98);
+  }
+
+  /* 2回目（完全コピー） */
+  78% {
+    transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
+  }
+
+  88% {
+    transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
+  }
+
+  96% {
+    transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
+  }
+
+  100% {
+    transform: translateY(0) scaleX(1.10) scaleY(0.90);
+  }
+}
+</style>
+
 </head>
+
 <body>
-  <img src="IMG_5595.jpeg" alt="キャラクター" class="poyo">
+
+<img src="ララピージャンピングポーズ.png" class="poyo">
+
 </body>
 </html>

@@ -20,7 +20,7 @@ body {
   height: auto;
   display: block;
   transform-origin: center bottom;
-  animation: poyoBounce 2.05s ease-in-out infinite;
+  animation: poyoBounce 2.0s ease-in-out infinite;
 }
 
 @keyframes poyoBounce {
@@ -28,12 +28,11 @@ body {
     transform: translateY(0) scaleX(1.00) scaleY(1.00);
   }
 
-  /* 1回目 上昇 */
+  /* 1回目 */
   12% {
     transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
   }
 
-  /* 1回目 滞空 */
   22% {
     transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
   }
@@ -42,27 +41,23 @@ body {
     transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
   }
 
-  /* 1回目 着地グシャ */
   36% {
     transform: translateY(3px) scaleX(1.18) scaleY(0.82);
   }
 
-  /* 1回目 ポニョーーん */
   42% {
     transform: translateY(2px) scaleX(1.15) scaleY(0.85);
   }
 
-  /* ちょい戻る */
   48% {
     transform: translateY(0) scaleX(1.03) scaleY(0.97);
   }
 
-  /* 2回目 上昇 */
+  /* 2回目 */
   58% {
     transform: translateY(-95px) scaleX(0.94) scaleY(1.08);
   }
 
-  /* 2回目 滞空 */
   68% {
     transform: translateY(-100px) scaleX(0.95) scaleY(1.07);
   }
@@ -71,28 +66,26 @@ body {
     transform: translateY(-95px) scaleX(0.96) scaleY(1.05);
   }
 
-  /* 2回目 着地グシャ */
   82% {
     transform: translateY(3px) scaleX(1.18) scaleY(0.82);
   }
 
-  /* 2回目 ポニョーーん */
   86% {
-    transform: translateY(2px) scaleX(1.14) scaleY(0.86);
+    transform: translateY(2px) scaleX(1.12) scaleY(0.88);
   }
 
-  /* ここが“ぴょぴょーん”前のタメ */
-  90% {
-    transform: translateY(0) scaleX(1.00) scaleY(1.00);
+  /* 余韻を短めに */
+  89% {
+    transform: translateY(0) scaleX(1.04) scaleY(0.96);
   }
 
-  /* 3回目 ちょい素早く小さめ */
-  95% {
-    transform: translateY(-72px) scaleX(0.96) scaleY(1.05);
+  /* 3回目：少し早め・少し軽め */
+  93% {
+    transform: translateY(-66px) scaleX(0.97) scaleY(1.04);
   }
 
-  98% {
-    transform: translateY(-76px) scaleX(0.97) scaleY(1.04);
+  96% {
+    transform: translateY(-70px) scaleX(0.98) scaleY(1.03);
   }
 
   100% {
@@ -100,10 +93,11 @@ body {
   }
 }
 </style>
+
 </head>
 <body>
 
-<img src="ララピージャンピングポーズ.png" class="poyo">
+<img src="ララピージャンピングポーズ.png" alt="ララピー" class="poyo">
 
 </body>
 </html>
